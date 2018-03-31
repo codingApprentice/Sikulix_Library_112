@@ -62,7 +62,9 @@ __all__ = ["BlockingIOError", "open", "IOBase", "RawIOBase", "FileIO",
            "BufferedRandom", "TextIOBase", "TextIOWrapper",
            "UnsupportedOperation", "SEEK_SET", "SEEK_CUR", "SEEK_END"]
 
-
+#####################
+import _io
+#####################
 import abc
 
 # For the time being, import everything via _jyio instead of from _io directly
@@ -78,15 +80,26 @@ from _jyio import (DEFAULT_BUFFER_SIZE, UnsupportedOperation,
                  open,
                  FileIO)
 #importations causing errors
-from _jyio import BlockingIOError
-from _jyio import BytesIO
-from _jyio import StringIO
-from _jyio import BufferedReader
-from _jyio import BufferedWriter
-from _jyio import BufferedRWPair
-from _jyio import BufferedRandom
-from _jyio import IncrementalNewlineDecoder
-from _jyio import TextIOWrapper
+# from _jyio import BlockingIOError
+# from _jyio import BytesIO
+# from _jyio import StringIO
+# from _jyio import BufferedReader
+# from _jyio import BufferedWriter
+# from _jyio import BufferedRWPair
+# from _jyio import BufferedRandom
+# from _jyio import IncrementalNewlineDecoder
+# from _jyio import TextIOWrapper
+#####################
+from _io import BlockingIOError
+from _io import BytesIO
+from _io import StringIO
+from _io import BufferedReader
+from _io import BufferedWriter
+from _io import BufferedRWPair
+from _io import BufferedRandom
+from _io import IncrementalNewlineDecoder
+from _io import TextIOWrapper
+#####################
 
 # from _jyio import * 
 
