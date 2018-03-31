@@ -77,10 +77,11 @@ import _jyio
 from _jyio import (DEFAULT_BUFFER_SIZE, UnsupportedOperation,
                  open,
                  FileIO,
-                 BytesIO, StringIO, BufferedReader,
+                 StringIO, BufferedReader,
                  BufferedWriter, BufferedRWPair, BufferedRandom,
                  IncrementalNewlineDecoder, TextIOWrapper)
 from _jyio import BlockingIOError
+from _jyio import BytesIO
 
 OpenWrapper = _jyio.open # for compatibility with _pyio
 
