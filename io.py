@@ -62,20 +62,12 @@ __all__ = ["BlockingIOError", "open", "IOBase", "RawIOBase", "FileIO",
            "BufferedRandom", "TextIOBase", "TextIOWrapper",
            "UnsupportedOperation", "SEEK_SET", "SEEK_CUR", "SEEK_END"]
 
-#####################
+		   
 import _io
-#####################
 import abc
 
-######################################################
 # For the time being, import everything via _jyio instead of from _io directly
 #import _jyio
-# from _jyio import (DEFAULT_BUFFER_SIZE, BlockingIOError, UnsupportedOperation,
-                 # open,
-                 # FileIO,
-                 # BytesIO, StringIO, BufferedReader,
-                 # BufferedWriter, BufferedRWPair, BufferedRandom,
-                 # IncrementalNewlineDecoder, TextIOWrapper)
 				 
 from _io import (DEFAULT_BUFFER_SIZE, BlockingIOError, UnsupportedOperation,
                  open,
@@ -83,39 +75,10 @@ from _io import (DEFAULT_BUFFER_SIZE, BlockingIOError, UnsupportedOperation,
                  BytesIO, StringIO, BufferedReader,
                  BufferedWriter, BufferedRWPair, BufferedRandom,
                  IncrementalNewlineDecoder, TextIOWrapper)
-###############################################				 
-				 		 
-# from _jyio import (DEFAULT_BUFFER_SIZE, UnsupportedOperation,
-                 # open,
-                 # FileIO)
-#importations causing errors
-# from _jyio import BlockingIOError
-# from _jyio import BytesIO
-# from _jyio import StringIO
-# from _jyio import BufferedReader
-# from _jyio import BufferedWriter
-# from _jyio import BufferedRWPair
-# from _jyio import BufferedRandom
-# from _jyio import IncrementalNewlineDecoder
-# from _jyio import TextIOWrapper
-#####################
-# from _io import BlockingIOError
-# from _io import BytesIO
-# from _io import StringIO
-# from _io import BufferedReader
-# from _io import BufferedWriter
-# from _io import BufferedRWPair
-# from _io import BufferedRandom
-# from _io import IncrementalNewlineDecoder
-# from _io import TextIOWrapper
-#####################
 
-# from _jyio import * 
-##########################
-#OpenWrapper = _jyio.open # for compatibility with _pyio
 
 OpenWrapper = _io.open # for compatibility with _pyio
-#####################
+
 # for seek()
 SEEK_SET = 0
 SEEK_CUR = 1
@@ -125,18 +88,6 @@ SEEK_END = 2
 # Method descriptions and default implementations are inherited from the C
 # version however.
 
-# class IOBase(_jyio._IOBase):
-    # __metaclass__ = abc.ABCMeta
-
-# class RawIOBase(_jyio._RawIOBase, IOBase):
-    # pass
-
-# class BufferedIOBase(_jyio._BufferedIOBase, IOBase):
-    # pass
-
-# class TextIOBase(_jyio._TextIOBase, IOBase):
-    # pass
-###################################	
 class IOBase(_io._IOBase):
     __metaclass__ = abc.ABCMeta
 
@@ -148,7 +99,7 @@ class BufferedIOBase(_io._BufferedIOBase, IOBase):
 
 class TextIOBase(_io._TextIOBase, IOBase):
     pass
-################################################
+
 	
 RawIOBase.register(FileIO)
 
