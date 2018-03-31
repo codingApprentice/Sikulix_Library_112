@@ -67,12 +67,20 @@ import abc
 
 # For the time being, import everything via _jyio instead of from _io directly
 import _jyio
-from _jyio import (DEFAULT_BUFFER_SIZE, BlockingIOError, UnsupportedOperation,
+# from _jyio import (DEFAULT_BUFFER_SIZE, BlockingIOError, UnsupportedOperation,
+                 # open,
+                 # FileIO,
+                 # BytesIO, StringIO, BufferedReader,
+                 # BufferedWriter, BufferedRWPair, BufferedRandom,
+                 # IncrementalNewlineDecoder, TextIOWrapper)
+				 
+from _jyio import (DEFAULT_BUFFER_SIZE, UnsupportedOperation,
                  open,
                  FileIO,
                  BytesIO, StringIO, BufferedReader,
                  BufferedWriter, BufferedRWPair, BufferedRandom,
                  IncrementalNewlineDecoder, TextIOWrapper)
+from _jyio import BlockingIOError
 
 OpenWrapper = _jyio.open # for compatibility with _pyio
 
