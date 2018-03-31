@@ -75,7 +75,7 @@ import _jyio
                  # IncrementalNewlineDecoder, TextIOWrapper)
 				 
 
-from _jyio import BufferedWriter
+
 from _jyio import BufferedRWPair
 from _jyio import BufferedRandom
 from _jyio import IncrementalNewlineDecoder
@@ -88,7 +88,7 @@ from _jyio import BlockingIOError
 from _jyio import BytesIO
 from _jyio import StringIO
 from _jyio import BufferedReader
-
+from _jyio import BufferedWriter
 
 OpenWrapper = _jyio.open # for compatibility with _pyio
 
