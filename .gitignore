@@ -1,0 +1,13 @@
+# Compiled class file
+*.class
+
+# Package Files #
+*.jar
+
+# Byte-compiled / optimized / DLL files
+*$py.class
+*.pyc
+
+# Distribution / packaging
+*.egg-info
+*.egg
